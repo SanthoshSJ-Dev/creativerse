@@ -1,2 +1,2 @@
 # creativerse
-https://creativerse.vercel.app
+https://creativerze.vercel.app
