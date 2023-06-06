@@ -1,0 +1,79 @@
+.banner {
+    background: linear-gradient(to bottom, var(--dark-color), #94b40200, var(--dark-color)), url(../assets/banner_bg.svg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    width: min(90%, 1000px);
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.type {
+    padding: 4rem 0 0.1rem 0;
+    font-weight: 900;
+    text-align: center;
+    font-size: var(--text-6);
+}
+
+.typewrite {
+    padding-right: 0.2rem;
+    border-right: 0.1em solid var(--secondary-color);
+    animation: typing 1.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: var(--secondary-color);
+    }
+}
+
+.banner_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+    gap: 5px;
+    padding: 10px 20px !important;
+    margin-bottom: 3rem;
+}
+
+.video {
+    background-color: black;
+    aspect-ratio: 16/9;
+    width: 600px;
+    border-radius: 20px;
+    border: 2px solid var(--primary-color);
+    opacity: 50%;
+}
+
+@media (max-width: 480px) {
+
+    .type {
+        padding: 3rem 0 0.1rem 0;
+    }
+
+    .video{
+        width: 300px;
+    }
+}

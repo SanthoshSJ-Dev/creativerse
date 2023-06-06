@@ -1,0 +1,134 @@
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 0;
+    padding: 10px 0px;
+    background: var(--dark-color);
+}
+
+.logo {
+    width: 30%;
+    font-weight: 900;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: left;
+    padding-left: 50px;
+}
+
+.menu_items {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 50px;
+}
+
+.nav_links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    list-style: none;
+}
+
+.login_signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu_icon {
+    display: none;
+    margin-right: 20px;
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+
+    /* CSS rules for small screens (portrait orientation) */
+
+    .navbar {
+        height: 30px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu_icon {
+        display: block;
+    }
+
+    .logo {
+        padding-left: 20px;
+    }
+
+    .nav_links {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: left;
+        gap: 40px;
+    }
+
+    .menu_items {
+        position: absolute;
+        top: 60px;
+        right: 0%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: end;
+        background-color: rgb(21, 34, 58);
+        padding: 10px 20px 20px 20px;
+        border-radius: 10px;
+        gap: 20px;
+    }
+
+    .login_signup {
+        flex-direction: column;
+        align-items: end;
+        gap: 10px;
+    }
+
+
+
+    /* chatgpt */
+
+    .menu_items {
+        transition: transform 0.3s ease;
+        transform: translateX(100%);
+    }
+
+    .menu_items.open {
+        transform: translateX(-10px);
+    }
+
+    .menu_icon {
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 767px) {
+    /* CSS rules for small screens (landscape orientation) */
+}
+
+/* Tablets and smaller desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+    /* CSS rules for medium screens */
+}
+
+/* Desktops and larger screens */
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* CSS rules for large screens */
+}
+
+@media (min-width: 1200px) {
+    /* CSS rules for extra-large screens */
+}
