@@ -2,8 +2,6 @@ import React from "react";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import Banner from "../assets/Frame.webp";
 
-import "../styles/TryOut.css";
-
 const TryOut = () => {
   return (
     <div className="try_out">
