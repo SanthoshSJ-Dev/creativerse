@@ -1,49 +1,67 @@
-.navbar {
+header {
     width: 100%;
-    position: fixed;
-    top: 0px;
-    z-index: 99;
+    height: 70px;
+    position: sticky;
+    top: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    line-height: 0;
-    padding: 10px 0px;
-    background: var(--dark-color);
+    z-index: 99;
 }
 
-.logo {
-    width: 30%;
-    font-weight: 900;
-    color: var(--primary-color);
-    font-size: 1.3rem;
-    display: flex;
-    justify-content: left;
-    padding-left: 50px;
-}
-
-.menu_items {
-    width: 70%;
+.navbar {
+    width: 90%;
+    background-color: var(--dark-color);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 20px 40px;
+    border-radius: 50px;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.menu_items {
+    font-size: 1rem;
+    font-weight: 600;
+    width: 62%;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding-right: 50px;
+    flex-direction: row;
 }
 
 .nav_links {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 50px;
-    list-style: none;
+    gap: 30px;
 }
 
-.login_signup {
+.nav_link {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    color: var(--primary-text);
+    gap: 2px;
+}
+
+.nav_link:hover>.drop_icon {
+    transition: 0.2s ease-in-out;
+    rotate: 180deg;
+}
+
+.nav_link:nth-child(1){
+    position: relative;
+}
+
+.primary_btn {
+    padding: 10px 20px;
 }
 
 .menu_icon {
@@ -52,14 +70,13 @@
 }
 
 /* Mobile devices */
-@media (max-width: 480px) {
+@media (max-width: 1000px) {
 
     /* CSS rules for small screens (portrait orientation) */
 
     .navbar {
-        height: 30px;
-        justify-content: space-between;
-        align-items: center;
+        width: 100%;
+        height: 50px;
     }
 
     .menu_icon {
@@ -79,9 +96,10 @@
     }
 
     .menu_items {
+        width: max-content;
         position: absolute;
-        top: 60px;
-        right: 0%;
+        top: 80px;
+        right: -20%;
         flex-direction: column;
         justify-content: center;
         align-items: end;
@@ -97,17 +115,13 @@
         gap: 10px;
     }
 
-
-
-    /* chatgpt */
-
     .menu_items {
         transition: transform 0.3s ease;
         transform: translateX(100%);
     }
 
     .menu_items.open {
-        transform: translateX(-10px);
+        transform: translateX(-100px);
     }
 
     .menu_icon {

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
-import {MdOutlineBolt} from 'react-icons/md'
+import { MdOutlineBolt } from "react-icons/md";
+
+import video from "../assets/sample_video.mp4";
 import "../styles/Banner.css";
 
 const TypingEffect = ({ textArray, period }) => {
@@ -13,23 +15,19 @@ const TypingEffect = ({ textArray, period }) => {
     const fullTxt = textArray[i];
 
     const tick = () => {
-      let delta = 200 - Math.random() * 100;
+      const shouldDelete = isDeleting && text.length > 0;
+      const shouldType = !isDeleting && text.length < fullTxt.length;
 
-      if (isDeleting) {
+      if (shouldDelete) {
         setText((prevText) => prevText.slice(0, -1));
-      } else {
+      } else if (shouldType) {
         setText((prevText) => fullTxt.substring(0, prevText.length + 1));
+      } else {
+        setIsDeleting(!isDeleting);
+        setLoopNum((prevLoopNum) => prevLoopNum + (isDeleting ? 1 : 0));
       }
 
-      if (!isDeleting && text === fullTxt) {
-        delta = period;
-        setIsDeleting(true);
-      } else if (isDeleting && text === "") {
-        setIsDeleting(false);
-        setLoopNum((prevLoopNum) => prevLoopNum + 1);
-        delta = 500;
-      }
-
+      const delta = shouldDelete ? period / 2 : period;
       timer = setTimeout(tick, delta);
     };
 
@@ -39,9 +37,10 @@ const TypingEffect = ({ textArray, period }) => {
 
   return (
     <h1 className="type">
-      Streamline Your YouTube Journey
-      <br />
-      AI-enhanced <span className="typewrite violet-gradient">{text}</span>
+      Level up your YouTube with <br />
+      AI tools:
+      <span> </span>
+      <span className="typewrite violet-gradient">{text}</span>
     </h1>
   );
 };
@@ -49,22 +48,27 @@ const TypingEffect = ({ textArray, period }) => {
 const Banner = () => {
   return (
     <div>
-      <div className="banner">
-        <div className="container">
-          <div className="type">
-            <TypingEffect
-              textArray={[
-                "Video Creator.",
-                "Content Writer.",
-                "Video Editor.",
-                "Audio Generator.",
-                "Video Uploader.",
-              ]}
-              period={200}
-            />
-          </div>
-          <a href="/" className="banner_btn primary_btn">Get Started <MdOutlineBolt/></a>
-          <div className="video"></div>
+      <div className="banner"></div>
+      <div className="container">
+        <div className="type">
+          <TypingEffect
+            textArray={["Create.", "Capativate.", "Conquer!"]}
+            period={200}
+          />
+        </div>
+        <a href="/" className="banner_btn primary_btn">
+          Get Started <MdOutlineBolt />
+        </a>
+        <div className="video">
+          <video
+            src={video}
+            width="100%"
+            controls
+            loop
+            autoPlay
+            playsInline
+            muted
+          ></video>
         </div>
       </div>
     </div>

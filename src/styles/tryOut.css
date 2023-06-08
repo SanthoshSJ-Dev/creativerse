@@ -1,0 +1,39 @@
+.try_out{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.try_out_banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.try_out_banner_img{
+    z-index: 2;
+    filter: grayscale();
+}
+
+.try_btn{
+    width: max-content;
+    background-color: var(--primary-color);
+    padding: 10px 20px 10px 40px;
+    font-size: var(--text-3);
+    color: white;
+    font-weight: 700;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    position: absolute; 
+}
+
+.try_out_icon{
+    margin: 0;
+    padding: 0;
+}
