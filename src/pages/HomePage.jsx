@@ -8,7 +8,7 @@ const HomePage = () => {
     <div>
       <Banner/>
       <Features/>
-      <TryOut/>
+    
     </div>
   )
 }
