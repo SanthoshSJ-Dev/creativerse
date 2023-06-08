@@ -5,16 +5,25 @@
   --primary-color: #1e91ff;
   --secondary-color: #b673f8;
 
-  --dark-color: #0d1017;
+  --dark-color-100:#aeb8d1;
+  --dark-color-200:#8d9cbf;
+  --dark-color-300:#6c80ac;
+  --dark-color-400:#536693;
+  --dark-color-500:#404f72;
+  --dark-color-600:#2e3951;
+  --dark-color-700:#1c2231;
+  --dark-color-800:#090b10;
+  --dark-color-900:#0d1017;
+
   --grey-color: #1b1b1b;
 
-  --primary-text: #ffffff;
+  --primary-text: #eff1f6;
   --secondary-text: #a3afba;
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 
   color: #ffffffde;
-  background-color: var(--dark-color);
+  background-color: var(--dark-color-900);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

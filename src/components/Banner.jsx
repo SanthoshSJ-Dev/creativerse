@@ -63,7 +63,6 @@ const Banner = () => {
           <video
             src={video}
             width="100%"
-            controls
             loop
             autoPlay
             playsInline

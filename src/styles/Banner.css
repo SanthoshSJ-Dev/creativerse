@@ -4,7 +4,7 @@
     position: absolute;
     top: 0;
     z-index: -1;
-    background: linear-gradient(to bottom, var(--dark-color), #94b40200, var(--dark-color)), url(../assets/banner_bg.svg);
+    background: linear-gradient(to bottom, var(--dark-color-900), #94b40200, var(--dark-color-900)), url(../assets/banner_bg.svg);
     background-size: cover;
     background-position: center;
 }
@@ -18,7 +18,7 @@
 }
 
 .type {
-    padding: 3rem 0 1rem 0;
+    padding: 5rem 0 1rem 0;
     font-weight: 900;
     text-align: center;
     font-size: var(--text-6);
@@ -57,7 +57,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1rem;
+    font-size: var(--text-1);
+    font-weight: 700;
     font-weight: 500;
     gap: 5px;
     padding: 10px 20px !important;
@@ -79,6 +80,16 @@
 @media (max-width: 480px) {
 
     .type {
-        padding: 3rem 0 0.1rem 0;
+        padding: 3rem 0 1rem 0;
+        font-size: var(--text-5);
+    }
+
+    .video {
+        width: 95%;
+    }
+
+    .video video {
+        border: 1.5px solid var(--primary-color);
+        border-radius: 10px;
     }
 }
