@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react'
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import Banner from "../assets/Frame.webp";
 
-import '../styles/Tryout.css';
+import '../styles/Trythis.css';
 
-const Tryout = () => {
+const Trythis = () => {
   return (
     <div className="try_out">
       <h1 className="try_out_title">Try our advanced AI Products</h1>
@@ -17,7 +17,8 @@ const Tryout = () => {
         <img className="try_out_banner_img" src={Banner} alt="" width="100%" />
       </div>
     </div>
-  );
-};
 
-export default Tryout;
+  )
+}
+
+export default Trythis
