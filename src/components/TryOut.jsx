@@ -2,7 +2,9 @@ import React from "react";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import Banner from "../assets/Frame.webp";
 
-const TryOut = () => {
+import '../styles/Tryout.css';
+
+const Tryout = () => {
   return (
     <div className="try_out">
       <h1 className="try_out_title">Try our advanced AI Products</h1>
@@ -18,4 +20,4 @@ const TryOut = () => {
   );
 };
 
-export default TryOut;
+export default Tryout;

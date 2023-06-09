@@ -1,16 +1,16 @@
-import React from 'react'
-import Banner from '../components/Banner'
-import Features from '../components/Features'
-import TryOut from '../components/TryOut'
+import React from "react";
+import Banner from "../components/Banner";
+import Features from "../components/Features";
+import Tryout from "../components/TryOut";
 
 const HomePage = () => {
   return (
-    <div>
-      <Banner/>
-      <Features/>
-    
-    </div>
-  )
-}
+    <>
+      <Banner />
+      <Features />
+      <Tryout />
+    </>
+  );
+};
 
-export default HomePage
+export default HomePage;
