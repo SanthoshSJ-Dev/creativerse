@@ -78,7 +78,7 @@ const Navbar = () => {
                 </a>
                 <ul className="sub-menu">
                   <li>
-                    <a href="#">Product 1</a>
+                    <a onClick={() => navigate(`/products`)}>Translate</a>
                   </li>
                   <li>
                     <a href="#">

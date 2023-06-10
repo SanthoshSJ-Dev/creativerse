@@ -1,10 +1,10 @@
 import React from "react";
-import TextTest from "../components/TextTest";
+import Translate from "../components/Products/Translate";
 
 const Products = () => {
   return (
     <div className="padding">
-      <TextTest />
+      <Translate />
     </div>
   );
 };

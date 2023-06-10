@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "../styles/TextTest.css";
+import "../../styles/Translate.css";
 
-const TextTest = () => {
+const Translate = () => {
   const [videoUrl, setVideoUrl] = useState("");
   const [selectedLanguage, setSelectedLanguage] = useState("");
   const [showDropdown, setShowDropdown] = useState(false);
@@ -28,12 +28,12 @@ const TextTest = () => {
   };
 
   const getButtonName = () => {
-    if (selectedLanguage === "ta") {
-      return "Tamil";
+    if (selectedLanguage === "zh-cn") {
+      return "Chinese";
     } else if (selectedLanguage === "te") {
       return "Telugu";
-    } else selectedLanguage === "zh-cn";
-    return "Chinese";
+    } else selectedLanguage === "ta";
+    return "Tamil";
   };
 
   return (
@@ -81,14 +81,14 @@ const TextTest = () => {
                 </div>
               )}
             </div>
+            <button className="translate_btn" onClick={linkToTranslate}>
+              Translate
+            </button>
           </div>
-          <button className="translate_btn" onClick={linkToTranslate}>
-            Translate
-          </button>
         </div>
       </div>
     </>
   );
 };
 
-export default TextTest;
+export default Translate;
