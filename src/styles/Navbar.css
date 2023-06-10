@@ -74,16 +74,6 @@ nav {
   color: var(--primary-color);
 }
 
-.btn {
-  padding: 10px;
-  cursor: pointer;
-}
-
-.btn:hover{
-  background-color: transparent;
-  border: 2px soild var(--primary-color);
-}
-
 .sub-menu {
   width: max-content;
   display: block;
@@ -123,6 +113,37 @@ nav {
   left: 100%;
 }
 
+.btn {
+  cursor: pointer;
+  padding: 10px 20px;
+  outline: unset;
+}
+
+.profile_icon {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile_icon_img {
+  width: 35px;
+  height: 35px;
+  border-radius: 100px;
+}
+
+.profile_tooltip_down {
+  background-color: white;
+  color: var(--dark-color-900);
+  top: 150%;
+  border-radius: 10px;
+  padding: 20px;
+  right: 0%;
+  position: absolute;
+}
+
 @media screen and (max-width: 900px) {
   .logo {
     padding-left: 1.5rem;
@@ -131,7 +152,7 @@ nav {
   .nav-list {
     position: fixed;
     top: 80px;
-    height: 100vh;
+    height: max-content;
     flex-direction: column;
     background-color: var(--dark-color-900);
     z-index: 1000;
@@ -149,7 +170,7 @@ nav {
   }
 
   .sub-menu {
-    width: 100%;
+    width: max-content;
     position: initial;
     border: 3px solid transparent;
     margin-left: 1rem;
@@ -182,7 +203,7 @@ nav {
   }
 
   .menu_icons {
-    padding-right: 0.4rem;
+    padding-right: 0px;
     margin-top: 7px;
     display: block;
   }
@@ -191,8 +212,27 @@ nav {
     display: flex;
   }
 
-  .btn {
-    margin: 10px 30px;
-    text-align: center;
+  .profile_icon {
+    margin-bottom: 20px;
+  }
+
+  .profile_tooltip_down {
+    display: flex;
+    flex-direction: row;
+    padding: 5px 10px;
+    position: unset;
+  }
+
+  .profile_tooltip_down>ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+@media (min-width:500px) and (max-width: 800px) {
+  .menu_icons {
+    padding-right: 20px;
   }
 }

@@ -1,11 +1,43 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
+import { signInWithPopup, GoogleAuthProvider, onAuthStateChanged } from 'firebase/auth';
+import ProfileIcon from './ProfileIcon';
 
-const LoginBtn = () => {
+const LoginBtn = ({auth}) => {
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setIsLoggedIn(true);
+      } else {
+        setIsLoggedIn(false);
+      }
+    });
+
+    return () => unsubscribe();
+  }, [auth]);
+
+  const handleLogin = async () => {
+    const provider = new GoogleAuthProvider();
+    try {
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
+      console.log(user);
+      setIsLoggedIn(true);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  
   return (
     <div>
-      <li className="primary_btn btn">
-        <a href="#">Continue with Google</a>
-      </li>
+        {isLoggedIn ? (
+        <ProfileIcon auth={auth}/>
+      ) : (
+        <button onClick={handleLogin} className="primary_btn btn">Connect</button>
+        )}
     </div>
   );
 };

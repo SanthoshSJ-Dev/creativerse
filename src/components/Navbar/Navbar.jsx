@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { MdClear, MdKeyboardArrowRight } from "react-icons/md";
 import { CgMenuRight } from "react-icons/cg";
+import {auth} from '../../config/firebase';
 
 import "../../styles/Navbar.css";
 import LoginBtn from "./LoginBtn";
@@ -106,7 +107,7 @@ const Navbar = () => {
               <li>
                 <a href="#">About</a>
               </li>
-              <LoginBtn/>
+              <LoginBtn auth={auth} />
             </ul>
           </nav>
         </div>
