@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { GoogleAuthProvider, onAuthStateChanged, signInWithRedirect } from 'firebase/auth';
+import { GoogleAuthProvider, onAuthStateChanged, signInWithPopup } from 'firebase/auth';
 import ProfileIcon from './ProfileIcon';
 
 const LoginBtn = ({auth}) => {
@@ -21,7 +21,7 @@ const LoginBtn = ({auth}) => {
   const handleLogin = async () => {
     const provider = new GoogleAuthProvider();
     try {
-      const result = await signInWithRedirect(auth, provider);
+      const result = await signInWithPopup(auth, provider);
       const user = result.user;
       console.log(user);
       setIsLoggedIn(true);
