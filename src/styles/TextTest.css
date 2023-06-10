@@ -1,0 +1,114 @@
+.translate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-size: var(--text-4);
+    margin-bottom: 1.5rem;
+}
+
+.translate_container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.translate_container>.input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+label {
+    font-size: var(--text-1);
+    font-weight: 700;
+}
+
+.translate_url_input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid var(--dark-color-300);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    color: var(--primary-text);
+    font-size: 16px;
+    background-color: transparent;
+}
+
+.dropdown_container{
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    gap: 20px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: transparent;
+    color: var(--primary-text);
+    border: 1px solid var(--dark-color-300);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    width: 150px;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-color-600);
+    border-radius: 4px;
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    padding: 8px 16px;
+    font-size: 16px;
+    color: var(--primary-text);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: var(--dark-color-700);
+}
+
+.translate_btn {
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: var(--primary-color);
+    border: none;
+    align-self: self-end;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.translate_btn:hover {
+    background-color: #0056b3;
+}
